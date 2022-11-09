@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Rock Scissors Paper</string>
+    <string name="titulo">Rock Scissors Paper</string>
+    <string name="piedra">Rock</string>
+    <string name="papel">Paper</string>
+    <string name="tijeras">Scissors</string>
+    <string name="tu">You</string>
+    <string name="maquina">Machine</string>
+    <string name="ganar">You Win</string>
+    <string name="perder">You Loose</string>
+    <string name="empate">Tie</string>
+    <string name="reinicio">RESET</string>
+    <string name="jugoHoja">Machine plays LEAF</string>
+    <string name="jugoAgua">Machine plays WATER</string>
+    <string name="jugoFuego">Machine plays FIRE</string>
+
+</resources>

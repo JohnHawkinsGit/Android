@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Piedra Papel Tijera</string>
+    <string name="titulo">Piedra Papel Tijera</string>
+    <string name="piedra">Piedra</string>
+    <string name="papel">Papel</string>
+    <string name="tijeras">Tijera</string>
+    <string name="tu">Tú</string>
+    <string name="maquina">Maquina</string>
+    <string name="ganar">Ganas</string>
+    <string name="perder">Pierdes</string>
+    <string name="empate">Empate</string>
+    <string name="reinicio">REINICIA</string>
+    <string name="jugoHoja">La máquina jugó HOJA</string>
+    <string name="jugoAgua">La máquina jugó AGUA</string>
+    <string name="jugoFuego">La máquina jugó FUEGO</string>
+
+</resources>

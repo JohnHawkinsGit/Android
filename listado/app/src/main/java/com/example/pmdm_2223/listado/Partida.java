@@ -1,10 +1,35 @@
 package com.example.pmdm_2223.listado;
 
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.UUID;
 
-public class Partida {
+@Entity(tableName = "partidas")
+public class Partida implements Serializable {
+    @PrimaryKey
+    public String uid;
+
+    @ColumnInfo(name="nomJuego")
+    public String juego;
+
+    @ColumnInfo(name= "jugador")
+    public String j1,j2,j3,j4;
+
+    @ColumnInfo(name = "puntos")
+    public int pto1,pto2,pto3,pto4;
+
+    public Partida(){
+        uid = UUID.randomUUID().toString();
+    }
+
+
+       /*
         public String j1,j2,j3,j4;
         public String pto1,pto2,pto3,pto4;
         public String juego, jImagen;
@@ -28,9 +53,6 @@ public class Partida {
             p.pto4 = ""+(int)(MIN_PTOS+Math.random()*MAX_PTOS);
             p.juego=juegos.get(0);
 
-
-
-
             return p;
         }
 
@@ -41,4 +63,5 @@ public class Partida {
             }
             return partidas;
         }
+        */
 }

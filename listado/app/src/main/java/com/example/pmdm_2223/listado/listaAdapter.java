@@ -1,5 +1,6 @@
 package com.example.pmdm_2223.listado;
 
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class listaAdapter extends RecyclerView.Adapter<listaAdapter.ViewHolder> {
- /* (custom ViewHolder).
-            */
+
     private ArrayList<Partida> datos;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -21,7 +21,8 @@ public class listaAdapter extends RecyclerView.Adapter<listaAdapter.ViewHolder> 
         private final TextView tj1,tj2,tj3,tj4;
         private final TextView tPJ1,tPJ2,tPJ3,tPJ4;
         private final TextView tJuego;
-
+        Datos informacion;
+        Bundle bundle;
         public ViewHolder(View view) {
             super(view);
             // Define click listener for the ViewHolder's View
@@ -35,9 +36,12 @@ public class listaAdapter extends RecyclerView.Adapter<listaAdapter.ViewHolder> 
             tPJ2 = (TextView) view.findViewById(R.id.tPJ2);
             tPJ3 = (TextView) view.findViewById(R.id.tPJ3);
             tPJ4 = (TextView) view.findViewById(R.id.tPJ4);
+            bundle=getIntent().getExtras();
+            informacion=(Datos)bundle.getSerializable("objeto");
         }
 
         public void setInfo(Partida partida) {
+
             tJuego.setText(partida.juego);
             if (tJuego.getText()=="Catan"){
                 iJuego.setImageResource(R.drawable.catan);
@@ -57,24 +61,17 @@ public class listaAdapter extends RecyclerView.Adapter<listaAdapter.ViewHolder> 
             if (tJuego.getText()=="The Island"){
                 iJuego.setImageResource(R.drawable.theisland);
             }
-            tj1.setText(partida.j1);
-            tj2.setText(partida.j2);
-            tj3.setText(partida.j3);
-            tj4.setText(partida.j4);
-            tPJ1.setText(partida.pto1);
-            tPJ2.setText(partida.pto2);
-            tPJ3.setText(partida.pto3);
-            tPJ4.setText(partida.pto4);
-
+            tj1.setText(informacion.getJ1());
+            tj2.setText(informacion.getJ2());
+            tj3.setText(informacion.getJ3());
+            tj4.setText(informacion.getJ4());
+            tPJ1.setText(informacion.getPto1());
+            tPJ2.setText(informacion.getPto2());
+            tPJ3.setText(informacion.getPto3());
+            tPJ4.setText(informacion.getPto4());
         }
     }
 
-    /**
-     * Initialize the dataset of the Adapter.
-     *
-     * @param dataSet String[] containing the data to populate views to be used
-     * by RecyclerView.
-     */
     public listaAdapter(Partida[] dataSet) {
         datos = new ArrayList<Partida>();
         add(dataSet);
@@ -106,7 +103,7 @@ public class listaAdapter extends RecyclerView.Adapter<listaAdapter.ViewHolder> 
     }
 
     public void add(Partida[] dataSet){
-        datos.addAll(Arrays.asList(dataSet));
+        datos.addAll(Arrays.asList( dataSet));
         notifyDataSetChanged();
     }
 }

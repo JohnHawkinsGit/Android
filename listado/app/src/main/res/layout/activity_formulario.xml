@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Formulario">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="241dp"
+        android:layout_height="205dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/H1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dado" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/H1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="226dp" />
+
+    <TextView
+        android:id="@+id/tPartida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Crear partida"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/H2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/H1"
+        app:layout_constraintVertical_bias="0.111" />
+
+    <EditText
+        android:id="@+id/eJ1"
+        android:layout_width="173dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Jugador 1"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eJ2"
+        app:layout_constraintEnd_toStartOf="@+id/eP1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/H2"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <EditText
+        android:id="@+id/eJ3"
+        android:layout_width="173dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Jugador 3"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eJ4"
+        app:layout_constraintEnd_toStartOf="@+id/eP3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/H2"
+        app:layout_constraintVertical_bias="0.835" />
+
+    <EditText
+        android:id="@+id/eP1"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Puntos Jugador 1"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eJ2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eJ1"
+        app:layout_constraintTop_toTopOf="@+id/H2" />
+
+    <EditText
+        android:id="@+id/eP2"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Puntos Jugador 2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eJ3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eJ2"
+        app:layout_constraintTop_toBottomOf="@+id/eP1" />
+
+    <EditText
+        android:id="@+id/eP3"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Puntos Jugador 3"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eJ4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eJ3"
+        app:layout_constraintTop_toBottomOf="@+id/eP2"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <EditText
+        android:id="@+id/eP4"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Puntos Jugador 4"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/H3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/eJ4"
+        app:layout_constraintTop_toBottomOf="@+id/eP3"
+        app:layout_constraintVertical_bias="0.542" />
+
+    <EditText
+        android:id="@+id/eJ4"
+        android:layout_width="175dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Jugador 4"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/H3"
+        app:layout_constraintEnd_toStartOf="@+id/eP4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/H2"
+        app:layout_constraintVertical_bias="0.897" />
+
+    <EditText
+        android:id="@+id/eJ2"
+        android:layout_width="172dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Jugador 2"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/eJ3"
+        app:layout_constraintEnd_toStartOf="@+id/eP2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/H2"
+        app:layout_constraintVertical_bias="0.776" />
+
+    <EditText
+        android:id="@+id/eJuego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre del juego"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/H2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tPartida" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/H2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="354dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/H3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="641dp" />
+
+    <Button
+        android:id="@+id/bCrear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#508C2F"
+        android:text="Crear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bCancelar"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/H3" />
+
+    <Button
+        android:id="@+id/bCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#BF2C2C"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/bCrear"
+        app:layout_constraintTop_toTopOf="@+id/H3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
